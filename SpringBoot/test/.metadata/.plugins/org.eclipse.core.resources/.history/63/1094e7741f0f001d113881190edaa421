@@ -1,0 +1,5 @@
+package com.test.demo.Dao;
+
+public interface countryDao {
+
+}

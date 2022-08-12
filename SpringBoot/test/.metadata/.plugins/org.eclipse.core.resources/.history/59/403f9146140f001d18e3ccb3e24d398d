@@ -1,0 +1,20 @@
+package controllor;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.swagger.v3.oas.annotations.tags.Tag;
+
+
+// @後加alt / 可以叫出import清單,就不用自己打import
+@RequestMapping
+@RestController
+@Tag(name="Example API",description ="Example API")
+public class countryControllor {
+	//GetMapping只能在內部呼叫,所以外部選不到
+	@GetMapping("/test")
+	public String query() {
+		return "Hello World";
+	}
+}
